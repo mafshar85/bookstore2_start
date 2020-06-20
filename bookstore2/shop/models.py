@@ -41,8 +41,8 @@ class BOOK(BaseModel):
     category = models.ForeignKey('Category', on_delete=models.PROTECT)
     tag = models.ManyToManyField(Tag)
     price = models.IntegerField()
-    cover = models.ImageField(upload_to='File/book-covers/', null=True, blank=True)
-    pdf = models.FileField(upload_to='File/pdf/', null=True, blank=True)
+    cover = models.ImageField(upload_to='shop/File/book-covers/', null=True, blank=True)
+    pdf = models.FileField(upload_to='shop/File/pdf/', null=True, blank=True)
 
     def __str__(self):
         return f"{self.name}-({self.author})"
